@@ -1,36 +1,84 @@
-* {box-sizing: border-box;}
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-body {
-  font-family: system-ui;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: flex-start;
-  background: #222;
-  min-height: 100vh;
+* {
+  box-sizing: border-box;
+  user-select: none; outline: none;
+  padding: 0; margin: 0; border: 0;
+  font-family: 'Press Start 2P', cursive;
 }
 
-body, p {margin: 0;}
+body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: #0a0a0f;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
 
-.score {flex-basis: 100%;}
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(247, 37, 133, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(247, 37, 133, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+  animation: gridScroll 8s linear infinite;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.08) 0px,
+    rgba(0, 0, 0, 0.08) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes gridScroll {
+  from { transform: translate(0, 0); }
+  to { transform: translate(40px, 40px); }
+}
+
+body, p { margin: 0; }
+
+.score {
+  flex-basis: 100%;
+  position: relative;
+  z-index: 2;
+}
 
 .score_content {
   display: flex;
   gap: 1rem;
-  background: #444;
+  background: rgba(247, 37, 133, 0.06);
+  border: 2px solid rgba(247, 37, 133, 0.25);
   width: fit-content;
-  padding: 0.5rem 1rem;
-  margin: 1rem auto;
-  border-radius: 1rem;
+  padding: 0.75rem 1.5rem;
+  margin: 1.5rem auto;
+  border-radius: 2px;
+  box-shadow: 0 0 15px rgba(247, 37, 133, 0.08);
 }
 
 .score_player {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #FFF;
-  background: #666;
+  font-size: 0.55rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.75);
+  background: rgba(247, 37, 133, 0.08);
   padding: 0.5rem 1rem;
-  border-radius: 1rem;
+  border-radius: 2px;
+  border: 1px solid rgba(247, 37, 133, 0.15);
 }
 
 .board, .painel {
@@ -39,6 +87,7 @@ body, p {margin: 0;}
   flex-wrap: wrap;
   width: clamp(18rem, 95%, 24rem);
   margin: 1rem;
+  z-index: 2;
 }
 
 .board:after {
@@ -47,61 +96,73 @@ body, p {margin: 0;}
   position: absolute; top: 0;
   width: 100%;
   height: 100%;
-  box-shadow: inset 0 0 0 2px #222;
+  box-shadow: inset 0 0 0 2px rgba(247, 37, 133, 0.15);
 }
 
 .board_tile, .painel_button {
   text-align: center;
-  font-size: clamp(0.7rem, 4vw, 1rem);
-  font-weight: 600;
+  font-size: clamp(0.5rem, 3vw, 0.65rem);
+  font-weight: 400;
   display: flex;
   place-items: center;
   width: calc(33.3% + 0.008rem);
   aspect-ratio: 1 / 1;
-  border: 2px solid #FFF;
-  transition: background 300ms ease-in-out;
+  border: 2px solid rgba(247, 37, 133, 0.2);
+  transition: background 300ms ease-in-out, border-color 300ms ease;
+  background: rgba(247, 37, 133, 0.03);
+  color: rgba(255, 255, 255, 0.7);
 }
-.board_tile:hover {background: #FFF4;}
-.board_tile:nth-child(1) {color: #F00;}
-.board_tile:nth-child(2) {color: #0F0;}
-.board_tile:nth-child(3) {color: #24F;}
-.board_tile:nth-child(4) {color: #FF0;}
-.board_tile:nth-child(5) {color: #F08;}
-.board_tile:nth-child(6) {color: #F0F;}
-.board_tile:nth-child(7) {color: #F80;}
-.board_tile:nth-child(8) {color: #80F;}
-.board_tile:nth-child(9) {color: #08F;}
+
+.board_tile {
+  justify-content: center;
+}
+
+.board_tile:hover {
+  background: rgba(247, 37, 133, 0.08);
+  border-color: rgba(247, 37, 133, 0.4);
+}
 
 .tile_text {
   width: 100%;
   rotate: -45deg;
+  font-size: clamp(0.6rem, 4vw, 1rem);
 }
 
-.painel {gap: 1rem;}
+.painel {
+  gap: 0.75rem;
+  justify-content: center;
+}
 
 .painel_button {
   display: inline;
   cursor: pointer;
-  font-size: 0.7rem;
-  color: #ffffff;
-  background: #444444;
-  width: calc(33.3% - 1rem);
+  font-size: 0.45rem;
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(247, 37, 133, 0.06);
+  width: calc(33.3% - 0.75rem);
   padding-inline: 0.5rem;
-  border: 1px solid #FFF;
-  border-radius: 1rem;
+  border: 2px solid rgba(247, 37, 133, 0.2);
+  border-radius: 2px;
+  aspect-ratio: auto;
+  min-height: 3rem;
+  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
 }
 .painel_button:hover,
 .painel_button:focus-visible {
-  background: #191919;
+  background: rgba(247, 37, 133, 0.12);
+  border-color: rgba(247, 37, 133, 0.5);
+  box-shadow: 0 0 15px rgba(247, 37, 133, 0.15);
 }
 
 .mark {
-  font-size: 4rem;
-  color: #FFF;
+  font-size: 2.5rem;
+  color: rgba(255, 255, 255, 0.85);
   rotate: 0deg;
 }
 
 .disable {
   cursor: default;
-  background: #320000;
+  background: rgba(247, 37, 133, 0.02);
+  border-color: rgba(247, 37, 133, 0.08);
+  color: rgba(255, 255, 255, 0.2);
 }

@@ -3,7 +3,8 @@
 * {
   user-select: none; outline: none;
   box-sizing: border-box;
-  font-family: 'Press Start 2P'; font-weight: lighter;
+  font-family: 'Press Start 2P', cursive;
+  font-weight: 400;
   padding: 0; margin: 0; border: 0;
 }
 
@@ -11,90 +12,138 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #222;
-  height: 100dvh;
+  background: #0a0a0f;
+  min-height: 100dvh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 193, 7, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 193, 7, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+  animation: gridScroll 8s linear infinite;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.08) 0px,
+    rgba(0, 0, 0, 0.08) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes gridScroll {
+  from { transform: translate(0, 0); }
+  to { transform: translate(40px, 40px); }
 }
 
 .container-score {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	background: #CCC;
-	width: clamp(20rem, 80%, 50rem);
-	padding: 1rem 2rem;
-	border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 193, 7, 0.04);
+  border: 2px solid rgba(255, 193, 7, 0.2);
+  width: clamp(20rem, 80%, 50rem);
+  padding: 2rem 2rem;
+  border-radius: 4px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0 30px rgba(255, 193, 7, 0.06), inset 0 0 30px rgba(255, 193, 7, 0.02);
 }
 
 .score-title {
-	text-align: center;
-  font-size: 2rem;
-	color: #444;
+  text-align: center;
+  font-size: 1.1rem;
+  color: rgba(255, 193, 7, 0.8);
   min-height: 2rem;
-	margin: 1rem 0;
+  margin: 0.5rem 0 1.5rem;
+  text-shadow: 0 0 15px rgba(255, 193, 7, 0.3);
 }
 
 .score-table {
-	background: #888;
-	width: 70%;
-	margin: 1rem;
-	padding: 0.5rem;
-	border-collapse: collapse;
-	border-radius: 0 0 1px 1px;
-	box-shadow: 0 0 0 0.5rem #888;
+  width: 80%;
+  margin: 0.5rem;
+  border-collapse: collapse;
 }
+
 .score-table tr th, .score-table tr td {
-	padding: 0.5rem;
-	border: 1px solid #FFF;
+  padding: 0.5rem;
+  border: 1px solid rgba(255, 193, 7, 0.15);
 }
 
 .score-caption {
-	font-size: 1.2rem;
-	background: #888;
-	padding: 1rem 0.5rem;
-	border: 1px solid #FFF;
-	border-radius: 1px 1px 0 0;
-	box-shadow: 0 0 0 0.5rem #888;
+  font-size: 0.6rem;
+  color: rgba(255, 255, 255, 0.6);
+  padding: 1rem 0.5rem 0.75rem;
   margin-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(255, 193, 7, 0.15);
 }
 
 .score-name {
-	text-decoration: underline;
-	font-size: 1.5rem;
-	color: #FFF;
+  text-decoration: underline;
+  font-size: 0.7rem;
+  color: rgba(255, 193, 7, 0.8);
 }
 
 .score-head {
-	text-align: center;
-	font-size: 1.1rem;
+  text-align: center;
+  font-size: 0.5rem;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .score-body {
-	text-align: center;
-	color: #FFF;
+  text-align: center;
+  font-size: 0.55rem;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .score-foot {
-	font-size: 1.1rem;
+  font-size: 0.5rem;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .score-total {
-	text-align: center;
-	color: #FFF;
+  text-align: center;
+  color: rgba(255, 193, 7, 0.7);
 }
 
 .without-score {
-	color: #CCC;
+  color: rgba(255, 255, 255, 0.25);
 }
 
 .button-continue {
-	cursor: pointer;
-	font-size: 1.2rem;
-	color: #FFF;
-	background: #C00;
-	width: 15rem;
-	padding: 1rem 0.5rem;
-  margin: 1rem 0;
-	border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.6rem;
+  color: #0a0a0f;
+  background: #ffc107;
+  width: 15rem;
+  padding: 1rem 0.5rem;
+  margin: 1.5rem 0 0.5rem;
+  border-radius: 2px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: background 0.15s, box-shadow 0.15s, transform 0.1s;
+  box-shadow: 0 0 20px rgba(255, 193, 7, 0.25);
 }
-.button-continue:hover {background: #800;}
+.button-continue:hover {
+  background: #ffca28;
+  box-shadow: 0 0 30px rgba(255, 193, 7, 0.4);
+}
+.button-continue:active {
+  transform: scale(0.97);
+}
