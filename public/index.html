@@ -16,8 +16,8 @@
     <link rel="icon" href="./favicon.png">
     <title>Mundo dos Isômeros</title>
   </head>
-
   <body>
+    <div class="particles" id="particles"></div>
     <form class="container-menu">
       <img class="menu-icon" src="./favicon.png" alt="atom icon">
       <h1 class="menu-text">Bem-vindo ao<br><strong>Mundo dos Isômeros</strong></h1>
@@ -58,5 +58,17 @@
     </table>
 
     <script src="./script.js" type="module"></script>
+    <script>
+      const container = document.getElementById('particles')
+      for (let i = 0; i < 30; i++) {
+        const p = document.createElement('div')
+        p.className = 'particle'
+        p.style.left = Math.random() * 100 + '%'
+        p.style.animationDuration = (4 + Math.random() * 8) + 's'
+        p.style.animationDelay = Math.random() * 8 + 's'
+        p.style.width = p.style.height = (1 + Math.random() * 2) + 'px'
+        container.appendChild(p)
+      }
+    </script>
   </body>
 </html>
