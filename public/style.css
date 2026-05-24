@@ -1,19 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
 
 * {
   user-select: none; outline: none;
   box-sizing: border-box;
-  font-family: 'Press Start 2P'; font-weight: lighter;
+  font-family: 'Inter', sans-serif;
   padding: 0; margin: 0; border: 0;
 }
 
 body {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  background: #222;
-  height: 100vh;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f0c29 0%, #1a1a3e 40%, #16213e 70%, #0a1628 100%);
+  padding: 2rem 1rem;
+  gap: 2rem;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 50%, rgba(0, 180, 216, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(247, 37, 133, 0.04) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Hexagonal pattern overlay */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' opacity='0.03'%3E%3Cpolygon points='50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5' fill='none' stroke='%2300b4d8' stroke-width='1'/%3E%3C/svg%3E");
+  background-size: 80px 80px;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .container-menu {
@@ -21,65 +47,106 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 25rem;
-  gap: 1rem;
-  margin: 2.5rem 1rem;
+  width: 26rem;
+  gap: 1.5rem;
+  padding: 2.5rem 2rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  position: relative;
+  z-index: 1;
 }
 
 .menu-icon {
-  width: 8rem;
+  width: 4rem;
   border-radius: 50%;
+  opacity: 0.8;
 }
 
 .menu-text {
   text-align: center;
-  font-size: 1.2rem;
-  line-height: 1.5rem;
-  color: #FFF;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.6rem;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: -0.01em;
 }
 
 .menu-input {
-  font-size: 1.1rem;
-  width: 24rem;
-  height: 2.1rem;
-  padding: 0.5rem;
-  border-radius: 5px;
+  font-size: 1rem;
+  width: 100%;
+  height: 3rem;
+  padding: 0 1rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+  text-align: center;
+  font-weight: 500;
 }
-.menu-input:placeholder-shown {font-size: 0.8rem;}
+.menu-input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+.menu-input:focus {
+  border-color: rgba(0, 180, 216, 0.5);
+  box-shadow: 0 0 0 3px rgba(0, 180, 216, 0.1);
+  background: rgba(255, 255, 255, 0.08);
+}
 
 .menu-button {
   cursor: pointer;
-  font-size: 1.1rem;
-  color: #FFF;
-  background: #C00;
-  width: 24rem;
-  padding: 0.5rem;
-  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  width: 100%;
+  height: 3rem;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #00b4d8, #0077b6);
+  border: none;
+  transition: transform 0.15s, box-shadow 0.2s, opacity 0.2s;
+  letter-spacing: 0.5px;
 }
-.menu-button:not(.disable):hover {background: #A00;}
+.menu-button:not(.disable):hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px rgba(0, 119, 182, 0.35);
+}
+.menu-button:not(.disable):active {
+  transform: translateY(0);
+}
 
 .disable {
   cursor: default;
-  color: #FFF;
-  background: #888;
+  color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .container-leaderboard {
   text-align: center;
-  background: #888;
-  border-spacing: 0.5rem;
-  padding: 0.2rem;
-  border-radius: 0 0 5px 5px;
-  margin: 2.5rem 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+  backdrop-filter: blur(20px);
+  min-width: 28rem;
+  border-spacing: 0;
+  overflow: hidden;
 }
 
 .leaderboard-title {
-  text-decoration: underline;
-  font-size: 1.1rem;
-  color: #FFF;
-  background: #888;
-  padding: 0.4rem 0.2rem 0;
-  border-radius: 5px 5px 0 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 1rem 1rem 0.75rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  display: table-caption;
+  caption-side: top;
 }
 
 .col-name {
@@ -88,40 +155,51 @@ body {
 
 .leaderboard-head {
   font-size: 0.7rem;
-  background: #CCC;
+  font-weight: 600;
 }
 .leaderboard-head tr th {
-  width: clamp(2rem, 10vw, 6rem);
-  padding: 0.3rem 0.2rem;
+  padding: 0.6rem 0.4rem;
+  color: rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 .leaderboard-head tr th:nth-child(1) {
-  width: 2rem;
+  width: 2.5rem;
 }
 
 .leaderboard-body {
-  font-size: 0.6rem;
-  background: #AAA;
+  font-size: 0.75rem;
+  font-weight: 600;
 }
 .leaderboard-body tr td {
-  font-weight: bold;
-  padding: 0.2rem;
+  padding: 0.5rem 0.3rem;
+  color: rgba(255, 255, 255, 0.75);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+.leaderboard-body tr:nth-child(even) td {
+  background: rgba(255, 255, 255, 0.02);
 }
 
 .leaderboard-foot {
-  font-size: 0.8rem;
-  background: #CCC;
+  font-size: 0.75rem;
 }
 .leaderboard-foot tr td {
-  font-weight: bold;
-  padding: 0.3rem 0.2rem;
+  font-weight: 600;
+  padding: 0.5rem 0.3rem;
+  color: rgba(255, 255, 255, 0.75);
 }
 .leaderboard-foot tr:nth-child(1) td {
-  color: #FFF;
-  background: #888;
+  color: rgba(255, 255, 255, 0.5);
+  background: rgba(0, 180, 216, 0.08);
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 0.6rem;
 }
 .leaderboard-foot :is([colspan]) {
-  font-size: 1.2rem;
-  font-weight: lighter;
+  font-weight: 700;
 }
 .leaderboard-foot :is(span) {
   text-decoration: underline;
