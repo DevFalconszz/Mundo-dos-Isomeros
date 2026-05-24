@@ -84,16 +84,25 @@ const getUserList = async (sb) => {
     if (/.*\<.*\>.*/.test(name)) { return }
     if (name.length < 3 || name.length > 8) { return }
 
+    btnSubmit.classList.add("disable")
+    btnSubmit.textContent = "Entrando..."
+
     const auth = CryptoJS.SHA256(name + Date.now() + String(Math.random())).toString()
 
-    await sb.from("users").insert({
+    const { error } = await sb.from("users").insert({
       auth, info: { name, scores: [0, 0, 0], total: 3600 }
     })
+
+    if (error) {
+      btnSubmit.textContent = "Iniciar"
+      btnSubmit.classList.remove("disable")
+      return
+    }
 
     localStorage.setItem("auth", auth)
 
     location.replace("./levels/")
-  }, { once: true })
+  })
 }
 
 getConfig()
