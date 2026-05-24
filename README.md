@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./logo.svg" alt="Mundo dos Isômeros Logo" width="500">
+  <img src="./logo.svg" alt="Mundo dos Isômeros Logo" width="300">
 </div>
 
 <br>
