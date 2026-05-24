@@ -1,0 +1,22 @@
+name: Keep Supabase Alive
+
+on:
+  schedule:
+    - cron: "0 */3 * * *"
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Supabase API
+        run: |
+          curl -s -o /dev/null -w "Status: %{http_code}\n" \
+            "https://zqoweajvntuffrekkbbn.supabase.co/rest/v1/users?select=count&limit=1" \
+            -H "apikey: sb_publishable_1bk4yWOrlabnW2yGsoALow_8yqwMSuY" \
+            -H "Authorization: Bearer sb_publishable_1bk4yWOrlabnW2yGsoALow_8yqwMSuY"
+
+      - name: Ping App Page
+        run: |
+          curl -s -o /dev/null -w "App: %{http_code}\n" \
+            "https://devfalconszz.github.io/Mundo-dos-Isomeros/"
