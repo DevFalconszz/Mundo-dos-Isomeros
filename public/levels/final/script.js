@@ -11,8 +11,13 @@ const getConfig = async () => {
   return sb
 }
 
-const animateTypingTitle = () => {
-  const title = "Você completou o nível!"
+const animateTypingTitle = (level) => {
+  const titles = {
+    1: "Parabens! Voce completou o Nivel 1!",
+    2: "Parabens! Voce completou o Nivel 2!",
+    3: "PARABENS! VOCE COMPLETOU O JOGO!"
+  }
+  const title = titles[level] || "Voce completou o nivel!"
   const titleAsArray = title.split("")
 
   const animate = () => {
@@ -97,9 +102,12 @@ window.addEventListener("load", async e => {
     return
   }
 
+  const { data: [ { info } ] } = await sb.from("users").select("info").eq("auth", auth)
+  const completedLevel = info.scores.filter(s => s > 0).length
+
   showUserScore(sb)
   addLinkButton(sb)
   handleRanking(sb)
   playsoundtrack()
-  animateTypingTitle()
+  animateTypingTitle(completedLevel)
 })
