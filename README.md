@@ -1,96 +1,168 @@
-# Mundo dos Isômeros 
-## Resumo: 
-
-O presente trabalho teve como objetivo estudar e investigar o uso do Software Educativo, embasado na Teoria da Mediação Cognitiva (TMC) de Vigotski, como uma abordagem eficaz para o ensino de química orgânica. Essa ferramenta educacional tem como finalidade auxiliar os alunos no desenvolvimento de habilidades cognitivas e na compreensão de conceitos complexos por meio da utilização de exemplos do cotidiano e tecnologias mediadas pelo homem. O Software Educativo foi aplicado em uma escola pública militar, no 3º ano do ensino médio, para estabelecer uma ponte entre a teoria e a prática na resolução da questão-problema. Ele foi desenvolvido em forma de um jogo, utilizando as tecnologias HTML, JavaScript e CSS. Além disto, ele possui três fases: a primeira é voltada para isômeros planos; a segunda, para isômeros geométricos e ópticos; e a terceira, para uma revisão de conteúdo. Cada fase é composta por um jogo diferenciado que estimula a interação entre a teoria, a prática e a tecnologia. O jogo apresenta uma interação de questões de múltipla escolha com o jogo em cada fase, despertando o interesse e a motivação dos alunos nesse conteúdo. Também, diferentemente dos jogos de questionário, quis e imagem dos compostos, o Software Educativo apresenta uma interação de jogos que estimulam a aprendizagem. Foi utilizada uma metodologia qualitativa e exploratória, com a aplicação de um questionário que demostrou a preferência da maioria dos estudantes pelo celular em vez do computador. Também foi realizada uma avaliação antes e depois da aplicação do Software Educativo para a obtenção dos resultados da aplicação do jogo. Espera-se que o uso desse tipo de tecnologia no ensino de química possa viabilizar a motivação dos alunos. Além disso, promover a interação entre professores e alunos e melhorar o processo de ensino-aprendizagem da Química Orgânica, voltada para os Isômeros. 
-
-**Palavras-chave: Ensino de química; Jogos lúdicos; Software em química.**
-
-<!--### [Tese completa](https://github.com/Vagetti-dev/Mundo-dos-Isomeros/blob/main/.github/Tese.pdf)
-![Game](https://github.com/Vagetti-dev/Gif/blob/main/giphy.gif)
--->
-
-## Aprenda Química com Jogos
-
-Bem-vindo ao nosso site, onde tornamos o aprendizado de química envolvente e divertido por meio de jogos interativos e software educacional. Nossa missão é fornecer aos estudantes ferramentas eficazes para aprimorar sua compreensão de conceitos de química orgânica, enquanto desfrutam do processo de aprendizado.
-
-## Sobre Nossa Abordagem
-
-Nossa abordagem se baseia em extensa pesquisa e na aplicação de Software Educacional fundamentado na Teoria da Mediação Cognitiva de Vygotsky. Acreditamos que a tecnologia, quando usada como ferramenta educacional, pode aproximar a teoria da prática, tornando conceitos complexos mais acessíveis aos estudantes.
-
-# Mapa do Site - Projeto de Jogos Educativos
-
-## Tabela de Conteúdos
-- [Leaderboard](#leaderboard)
-- [Página de Apresentação](#página-de-apresentação)
-- [Fase 1 - Roleta](#fase-1-roleta)
-- [Fase 1 - Quiz](#fase-1-quiz)
-- [Fase 2 - Jogo da Memória](#fase-2-jogo-da-memória)
-- [Mensagem de Nível Completo](#mensagem-de-nível-completo)
-- [Fase 3 - Jogo da Velha](#fase-3-jogo-da-velha)
-
-## Leaderboard
-- **Descrição:** Página exibindo a pontuação e classificação dos jogadores.
-- **Screenshot:** ![Leaderboard](https://i.imgur.com/fuUjDaQ.png)
-
-## Página de Apresentação
-- **Descrição:** Página inicial apresentando o conceito do jogo e instruções.
-- **Screenshot:** ![Página de Apresentação](https://i.imgur.com/0sPM0gF.png)
-
-## Fase 1 - Roleta
-- **Descrição:** Primeira fase do jogo envolvendo uma roleta interativa.
-- **Screenshot:** ![Fase 1 - Roleta](https://i.imgur.com/3zCvaus.png)
-
-## Fase 1 - Quiz
-- **Descrição:** Perguntas de quiz relacionadas à temática da roleta.
-- **Screenshot:** ![Fase 1 - Quiz](https://i.imgur.com/EqN7zTe.png)
-
-## Fase 2 - Jogo da Memória
-- **Descrição:** Segunda fase com um jogo de memória desafiador.
-- **Screenshot:** ![Fase 2 - Jogo da Memória](https://i.imgur.com/wKWqLQK.png)
-- **Screenshot:** ![Fase 2 - Jogo da Memória](https://i.imgur.com/u36K0KD.png)
-
-## Mensagem de Nível Completo
-- **Descrição:** Feedback ao jogador após completar uma fase.
-- **Screenshot:** ![Mensagem de Nível Completo](https://i.imgur.com/D9G0hMh.png)
-
-## Fase 3 - Jogo da Velha
-- **Descrição:** Última fase do jogo com um emocionante Jogo da Velha.
-- **Screenshot:** ![Fase 3 - Jogo da Velha](https://i.imgur.com/liG0d3a.png)
-- **Screenshot:** ![Fase 3 - Jogo da Velha](https://i.imgur.com/JL5kTSv.png)
-
-## Sobre nós
-
-Conheça os cérebros por trás do Site dos Isômeros:
-
-- **Octávio** - *Fullstack Developer*
-   - GitHub: [octavio_oi](https://github.com/octavio-oi)
-
-- **Patrick** - *Front-end Developer*
-   - GitHub: [DevFalconsz](https://github.com/DevFalconsz)
-
-## O Software Educacional
-
-Nosso software educacional é projetado na forma de um jogo, aproveitando as tecnologias HTML, JavaScript e CSS. Ele se concentra em tópicos de química orgânica, em particular, isômeros, e está dividido em três fases envolventes:
-
-1. **Isômeros de Estruturas Planas**: Esta fase introduz o conceito de isômeros planos.
-2. **Isômeros Geométricos e Ópticos**: Aprofunde-se no mundo dos isômeros geométricos e ópticos.
-3. **Fase de Revisão**: Uma revisão abrangente do conteúdo abordado no jogo.
-
-Cada fase apresenta um jogo exclusivo que incentiva a interação entre conhecimento teórico, aplicação prática e tecnologia. Os jogos incorporam perguntas de múltipla escolha, promovendo o envolvimento do aluno e a motivação para aprender.
-
-## Metodologia e Avaliação
-
-Realizamos um estudo qualitativo e exploratório, incluindo um questionário que revelou a preferência dos estudantes por dispositivos móveis em relação aos computadores. Além disso, aplicamos avaliações pré e pós para medir o impacto do Software Educacional.
-
-## Nossa Visão
-
-Nossa visão é utilizar a tecnologia para inspirar e motivar os estudantes no campo da química. Pretendemos promover a interação entre professores e estudantes, ao mesmo tempo que melhoramos o processo de ensino e aprendizado, especialmente no âmbito da Química Orgânica e dos Isômeros.
-
-Junte-se a nós nesta jornada educacional e vamos explorar o fascinante mundo da química por meio de jogos interativos e divertidos!
-
-
 <div align="center">
-  <h3>Para visualizar a tese completa clique <a href="https://github.com/Vagetti-dev/Mundo-dos-Isomeros/blob/main/.github/Tese.pdf">AQUI.</a></h3>
-  <img src="https://github.com/Vagetti-dev/Gif/blob/main/giphy.gif" alt="Game">
+  <img src="./logo.svg" alt="Mundo dos Isômeros Logo" width="500">
 </div>
 
+<br>
+
+<div align="center">
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?logo=supabase&logoColor=white)](https://supabase.com/)
+
+</div>
+
+---
+
+## Sobre o Projeto
+
+**Mundo dos Isômeros** é um software educativo desenvolvido como ferramenta de apoio ao ensino de **Química Orgânica**, especificamente sobre **isômeros**. O projeto une teoria pedagógica — fundamentada na Teoria da Mediação Cognitiva (TMC) de Vigotski — com tecnologia interativa para tornar o aprendizado mais engajante e eficaz.
+
+O software foi aplicado e validado em uma escola pública militar, com alunos do 3º ano do Ensino Médio, demonstrando resultados positivos na motivação e compreensão dos conceitos.
+
+---
+
+## Índice
+
+- [Screenshots](#screenshots)
+- [Fases do Jogo](#fases-do-jogo)
+- [Abordagem Pedagógica](#abordagem-pedagógica)
+- [Tecnologias](#tecnologias)
+- [Como Jogar](#como-jogar)
+- [Tese Acadêmica](#tese-acadêmica)
+- [Equipe](#equipe)
+- [Licença](#licença)
+
+---
+
+## Screenshots
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center"><img src="https://i.imgur.com/0sPM0gF.png" width="200" alt="Apresentação"><br><sub>Apresentação</sub></td>
+      <td align="center"><img src="https://i.imgur.com/3zCvaus.png" width="200" alt="Roleta"><br><sub>Fase 1 — Roleta</sub></td>
+      <td align="center"><img src="https://i.imgur.com/EqN7zTe.png" width="200" alt="Quiz"><br><sub>Fase 1 — Quiz</sub></td>
+    </tr>
+    <tr>
+      <td align="center"><img src="https://i.imgur.com/wKWqLQK.png" width="200" alt="Memória"><br><sub>Fase 2 — Jogo da Memória</sub></td>
+      <td align="center"><img src="https://i.imgur.com/u36K0KD.png" width="200" alt="Memória 2"><br><sub>Fase 2 — Jogo da Memória</sub></td>
+      <td align="center"><img src="https://i.imgur.com/liG0d5a.png" width="200" alt="Jogo da Velha"><br><sub>Fase 3 — Jogo da Velha</sub></td>
+    </tr>
+    <tr>
+      <td align="center"><img src="https://i.imgur.com/D9G0hMh.png" width="200" alt="Nível Completo"><br><sub>Nível Completo</sub></td>
+      <td align="center"><img src="https://i.imgur.com/fuUjDaQ.png" width="200" alt="Leaderboard"><br><sub>Leaderboard</sub></td>
+      <td></td>
+    </tr>
+  </table>
+</div>
+
+---
+
+## Fases do Jogo
+
+O jogo é dividido em **três fases**, cada uma com um formato único que combina mecânica lúdica com conteúdos de química orgânica:
+
+### 🎡 Fase 1 — Isômeros Planos
+> Roleta interativa + Quiz de múltipla escolha
+
+Aborda isomeria plana: cadeia, posição, função, metamería e tautomeria.
+
+### 🧠 Fase 2 — Isômeros Geométricos e Ópticos
+> Jogo da Memória
+
+Trabalha conceitos de isomeria geométrica (_cis/trans_) e isomeria óptica (isômeros dextro/levo).
+
+### ❌ Fase 3 — Revisão Geral
+> Jogo da Velha temático
+
+Revisa todo o conteúdo das fases anteriores de forma cruzada e divertida.
+
+---
+
+## Abordagem Pedagógica
+
+O software foi construído com base na **Teoria da Mediação Cognitiva (TMC)** de **Lev Vigotski**, que defende o aprendizado mediado por ferramentas e signos. Aqui, a tecnologia atua como instrumento mediador entre o aluno e o conhecimento, transformando conceitos abstratos de química em experiências interativas.
+
+> *"O bom ensino é aquele que se adianta ao desenvolvimento."* — Lev Vigotski
+
+### Diferenciais
+
+- **Jogos, não só quizzes** — cada fase apresenta uma mecânica lúdica distinta, indo além do formato pergunta-resposta.
+- **Contextualização visual** — uso de imagens e representações moleculares para conectar teoria e prática.
+- **Feedback imediato** — o jogador recebe retorno constante sobre seu desempenho, promovendo a correção de rota em tempo real.
+
+---
+
+## Tecnologias
+
+| Tecnologia | Finalidade |
+|---|---|
+| **HTML5** | Estrutura do jogo |
+| **CSS3** | Estilização e layout responsivo |
+| **JavaScript (Vanilla)** | Lógica do jogo e interatividade |
+| **Supabase** | Leaderboard e persistência de dados |
+| **CryptoJS** | Criptografia de dados no cliente |
+
+---
+
+## Como Jogar
+
+1. Acesse o site do projeto (em breve link oficial).
+2. Digite seu nome na tela inicial.
+3. Escolha uma fase para começar.
+4. Responda às perguntas e complete os desafios para avançar.
+5. Acumule pontos e veja sua posição no **Leaderboard**!
+
+> 💡 **Dica:** O jogo é otimizado para dispositivos móveis, a plataforma preferida da maioria dos alunos durante a pesquisa.
+
+---
+
+## Tese Acadêmica
+
+Este projeto foi desenvolvido como parte de uma pesquisa acadêmica completa. A tese original está disponível para consulta:
+
+<div align="center">
+  <a href="./.github/Tese.pdf">
+    <img src="https://img.shields.io/badge/📄_Tese_Completa-Download-0077b6?style=for-the-badge" alt="Tese Completa">
+  </a>
+</div>
+
+---
+
+## Equipe
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <a href="https://github.com/octavio-oi">
+        <img src="https://github.com/octavio-oi.png" width="80" style="border-radius:50%" alt="Octávio">
+      </a>
+      <br><sub><b>Octávio</b></sub>
+      <br><sub>Fullstack Developer</sub>
+    </td>
+    <td align="center">
+      <a href="https://github.com/DevFalconsz">
+        <img src="https://github.com/DevFalconsz.png" width="80" style="border-radius:50%" alt="Patrick">
+      </a>
+      <br><sub><b>Patrick</b></sub>
+      <br><sub>Front-end Developer</sub>
+    </td>
+  </tr>
+</table>
+
+---
+
+## Licença
+
+Distribuído sob a licença MIT. Veja [`LICENSE`](./LICENSE) para mais informações.
+
+---
+
+<div align="center">
+  <sub>Feito com ❤️ para transformar o ensino de Química Orgânica.</sub>
+  <br>
+  <sub>Repositório original: <a href="https://github.com/DevFalconsz/Mundo-dos-Isomeros">DevFalconsz/Mundo-dos-Isomeros</a></sub>
+</div>

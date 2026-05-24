@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 140" width="500" height="140">
+  <defs>
+    <linearGradient id="primary" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00b4d8"/>
+      <stop offset="100%" stop-color="#0077b6"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f72585"/>
+      <stop offset="100%" stop-color="#b5179e"/>
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00b4d8"/>
+      <stop offset="100%" stop-color="#0077b6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer hexagon (benzene ring) -->
+  <polygon points="70,20 120,40 120,80 70,100 20,80 20,40"
+           fill="none" stroke="url(#primary)" stroke-width="3.5" stroke-linejoin="round"/>
+
+  <!-- Inner hexagon -->
+  <polygon points="70,35 105,48 105,72 70,85 35,72 35,48"
+           fill="none" stroke="url(#primary)" stroke-width="1.5" stroke-linejoin="round" opacity="0.6"/>
+
+  <!-- Double bond indication (3 lines inside) -->
+  <line x1="45" y1="53" x2="55" y2="58" stroke="url(#accent)" stroke-width="2"/>
+  <line x1="85" y1="62" x2="95" y2="67" stroke="url(#accent)" stroke-width="2"/>
+  <line x1="70" y1="30" x2="70" y2="38" stroke="url(#accent)" stroke-width="2"/>
+
+  <!-- Electron orbit 1 -->
+  <ellipse cx="70" cy="60" rx="38" ry="14" fill="none" stroke="url(#accent)" stroke-width="1.2"
+           stroke-dasharray="3,3" transform="rotate(25,70,60)" opacity="0.5"/>
+  <!-- Electron orbit 2 -->
+  <ellipse cx="70" cy="60" rx="38" ry="14" fill="none" stroke="url(#accent)" stroke-width="1.2"
+           stroke-dasharray="3,3" transform="rotate(-30,70,60)" opacity="0.5"/>
+
+  <!-- Electrons -->
+  <circle cx="85" cy="48" r="3.5" fill="url(#accent)"/>
+  <circle cx="58" cy="72" r="3.5" fill="url(#accent)"/>
+  <circle cx="42" cy="50" r="3.5" fill="url(#accent)"/>
+
+  <!-- Text -->
+  <text x="140" y="52" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif"
+        font-size="14" font-weight="600" fill="#555" letter-spacing="4">MUNDO DOS</text>
+  <text x="140" y="85" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif"
+        font-size="30" font-weight="900" fill="url(#textGrad)" letter-spacing="2">ISÔMEROS</text>
+
+  <!-- Subtitle -->
+  <text x="140" y="108" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif"
+        font-size="10" fill="#888" letter-spacing="3">SOFTWARE EDUCATIVO · QUÍMICA ORGÂNICA</text>
+</svg>
